@@ -21,7 +21,7 @@ function singleLine(){
 		    showgrid: false,
 		    zeroline: true,
 		    zerolinecolor: '#969696',
-		    showline: true
+		    showline: false
 		},
 		yaxis: {
 			title: 'y-axis',
@@ -54,12 +54,13 @@ function lineChart(){
 	var data = [trace1, trace2];
 
 	var layout = {
-		title:'Line and Scatter Plot',
+		title:'Remove buttons from Modebar',
 		xaxis: {
 		    title: 'x-axis',
 		    showgrid: false,
 		    zeroline: true,
-		    showline: true
+		    showline: true,
+		    tickmode:
 		},
 		yaxis: {
 			title: 'y-axis',
@@ -69,7 +70,10 @@ function lineChart(){
 	};
 
 	Plotly.newPlot('lineChart', data, layout, {
-		displaylogo:false
+		displaylogo:false,
+		scrollZoom:true,
+		//http://community.plot.ly/t/remove-options-from-the-hover-toolbar/130/2
+		modeBarButtonsToRemove:['zoomIn2d', 'zoomOut2d', 'lasso2d', 'select2d']
 	});
 
 }
