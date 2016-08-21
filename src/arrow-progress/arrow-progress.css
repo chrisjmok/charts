@@ -1,5 +1,4 @@
 /* Global CSS, you probably don't need that */
-
 .clearfix:after {
     clear: both;
     content: "";
@@ -19,7 +18,7 @@
   vertical-align: middle;
 }
 
-/* Breadcrups CSS */
+/* arrow-steps standalone CSS (you dont need the above) */
 
   .arrow-steps .step {
     font-size: 14px;
@@ -109,82 +108,98 @@
     border-left: 17px solid #407aef;  
   }
 
-/* Breadcrups-short CSS */
+  /* arrow-steps-short standalone CSS (you dont need the above) */
 
-  .arrow-steps-short .step {
-    font-size: 14px;
-    text-align: center;
-    color: #666;
-    cursor: default;
-    margin: 0 3px;
-    padding: 5px 10px 5px 30px;
-    min-width: 20%;
-    float: left;
-    position: relative;
-    background-color: #d9e3f7;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
-    transition: background-color 0.2s ease;
-  }
+    .arrow-steps-short .step {
+      /* These are different */
+      font-size: 12px;
+      /* ./These are different */
+      text-align: center;
+      color: #666;
+      cursor: default;
+      margin: 0 3px;
+      /* These are different */
+      padding: 8px 10px 8px 30px;
+      /* ./These are different */
+      min-width: 180px;
+      float: left;
+      position: relative;
+      background-color: #d9e3f7;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; 
+      transition: background-color 0.2s ease;
+    }
 
-  .arrow-steps-short .step:after,
-  .arrow-steps-short .step:before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: -17px;
-    width: 0;
-    height: 0;
-    border-top: 14px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-left: 17px solid #d9e3f7;  
-    z-index: 2;
-    transition: border-color 0.2s ease;
-  }
+    .arrow-steps-short .step:after,
+    .arrow-steps-short .step:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: -17px;
+      width: 0;
+      height: 0;
+      /* These are different */
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 17px solid #d9e3f7;  
+      /* ./These are different */
+      z-index: 2;
+      transition: border-color 0.2s ease;
+    }
 
-  .arrow-steps-short .step:before {
-    right: auto;
-    left: 0;
-    border-left: 17px solid #fff; 
-    z-index: 0;
-  }
+    .arrow-steps-short .step:before {
+      right: auto;
+      left: 0;
+      border-left: 17px solid #fff; 
+      z-index: 0;
+    }
 
-  .arrow-steps-short .step:first-child:before {
-    border: none;
-  }
+    .arrow-steps-short .step:first-child:before {
+      border: none;
+    }
 
-  .arrow-steps-short .step:first-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
+    .arrow-steps-short .step:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
 
-  .arrow-steps-short .step span {
-    position: relative;
-  }
+    .arrow-steps-short .step span {
+      position: relative;
+    }
 
-  .arrow-steps-short .step span:before {
-    opacity: 0;
-    content: "✔";
-    position: absolute;
-    top: -2px;
-    left: -20px;
-  }
+    .arrow-steps-short .step span:before {
+      opacity: 0;
+      /*content: "✔";*/
+      content: "Done";
+      color: #fff;
+      position: absolute;
+      /*top: -2px;*/
+      /*left: -20px;*/
+    }
 
-  .arrow-steps-short .step.done span:before {
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease 0.5s;
-    -moz-transition: opacity 0.3s ease 0.5s;
-    -ms-transition: opacity 0.3s ease 0.5s;
-    transition: opacity 0.3s ease 0.5s;
-  }
+    .arrow-steps-short .step.done {
+      background-color: #44cc6c;
+      color: #44cc6c;
+    }
+    .arrow-steps-short .step.done:after {
+      border-left: 17px solid #44cc6c;  
+    }
 
-  .arrow-steps-short .step.current {
-    color: #fff;
-    background-color: #23468c;
-  }
+    .arrow-steps-short .step.done span:before {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease 0.5s;
+      -moz-transition: opacity 0.3s ease 0.5s;
+      -ms-transition: opacity 0.3s ease 0.5s;
+      transition: opacity 0.3s ease 0.5s;
+    }
 
-  .arrow-steps-short .step.current:after {
-    border-left: 17px solid #23468c;  
-  }
+    .arrow-steps-short .step.current {
+      color: #fff;
+      background-color: #407aef;
+    }
+
+    .arrow-steps-short .step.current:after {
+      border-left: 17px solid #407aef;  
+    }
