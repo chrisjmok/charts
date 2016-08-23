@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>arrow-progress</title>
+  <link rel="stylesheet" type="text/css" href="./arrow-progress.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>normal</h1>
+    <div class="arrow-steps clearfix">
+      <div id="step1" class="step done"> 
+        <span> Step 1</span> 
+      </div>
+      <div id="step2" class="step current"> 
+        <span>Step 2 some words</span> 
+      </div>
+      <div id="step3" class="step"> 
+        <span> Step 3</span> 
+      </div>
+      <div id="step4" class="step"> 
+        <span>Step 4</span> 
+      </div>
+    </div>
+    <div class="nav clearfix">
+      <a href="#" id='arrow-steps-prev'>Previous</a>
+      <a href="#" id='arrow-steps-next'>Next</a>
+    </div>
+    <h1>short</h1>
+    <div class="arrow-steps-short clearfix mbs">
+      <div id="step1" class="step done"> 
+        <span> Step 1</span> 
+      </div>
+      <div id="step2" class="step current"> 
+        <span>Step 2 some words</span> 
+      </div>
+      <div id="step3" class="step"> 
+        <span> Step 3</span> 
+      </div>
+      <div id="step4" class="step"> 
+        <span>Step 4</span> 
+      </div>
+    </div>
+    <div class="nav clearfix">
+      <a href="#" id='arrow-steps-short-prev'>Previous</a>
+      <a href="#" id='arrow-steps-short-next'>Next</a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src='./arrow-progress.js'></script>
+</body>
+
+</html>
